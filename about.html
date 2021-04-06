@@ -220,7 +220,7 @@
                 <div class="col-lg-8">
                     <div class="team-container">
                       <div class="item flip-card">
-                        <div class="flip-card-inner">
+                        <div class="flip-card-inner" onclick="flipCard(this, true);">
                           <div class="flip-card-front">
                             <div class="wow fadeInUp" data-wow-delay=".3s">
                                 <div class="img wow imago">
@@ -244,7 +244,7 @@
                         </div>
                       </div>
                         <div class="item flip-card">
-                          <div class="flip-card-inner">
+                          <div class="flip-card-inner" onclick="flipCard(this, true);">
                             <div class="flip-card-front">
                               <div class="wow fadeInUp" data-wow-delay=".3s">
                                   <div class="img wow imago">
@@ -268,7 +268,7 @@
                           </div>
                         </div>
                         <div class="item flip-card">
-                          <div class="flip-card-inner">
+                          <div class="flip-card-inner" onclick="flipCard(this, true);">
                             <div class="flip-card-front">
                               <div class="wow fadeInUp" data-wow-delay=".3s">
                                   <div class="img wow imago">
@@ -292,7 +292,7 @@
                           </div>
                         </div>
                         <div class="item flip-card">
-                          <div class="flip-card-inner">
+                          <div class="flip-card-inner" onclick="flipCard(this, true);">
                             <div class="flip-card-front">
                               <div class="wow fadeInUp" data-wow-delay=".3s">
                                   <div class="img wow imago">
@@ -316,7 +316,7 @@
                           </div>
                         </div>
                         <div class="item flip-card">
-                          <div class="flip-card-inner">
+                          <div class="flip-card-inner" onclick="flipCard(this, true);">
                             <div class="flip-card-front">
                               <div class="wow fadeInUp" data-wow-delay=".3s">
                                   <div class="img wow imago">
@@ -340,7 +340,7 @@
                           </div>
                         </div>
                         <div class="item flip-card">
-                          <div class="flip-card-inner">
+                          <div class="flip-card-inner" onclick="flipCard(this, true);">
                             <div class="flip-card-front">
                               <div class="wow fadeInUp" data-wow-delay=".3s">
                                   <div class="img wow imago">
@@ -513,6 +513,18 @@
 
     <!-- custom scripts -->
     <script src="js/scripts.js"></script>
+
+    <script>
+      function flipCard(ele, type){
+        if(type){
+          $(ele).css('transform', 'rotateY(180deg)');
+          $(ele).attr('onclick', 'flipCard(this, false)');
+        }else{
+          $(ele).css('transform', 'rotateY(0deg)');
+          $(ele).attr('onclick', 'flipCard(this, true)');
+        }
+      }
+    </script>
 
 </body>
 
